@@ -1,0 +1,15 @@
+# Binaly files
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# test binaly
+*.test
+
+# coverage report file
+*.out
+
+# Configuration file and directory of visual studio code
+/.vscode/
