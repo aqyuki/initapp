@@ -108,7 +108,7 @@ func TestNewConfig(t *testing.T) {
 					return
 				}
 				if !tt.wantPanic {
-					t.Errorf("Error (%s) : PPanic ensues., got -> %+v", tt.name, err)
+					t.Errorf("Error (%s) : Panic ensues., got -> %+v", tt.name, err)
 				}
 				if err != tt.panicMsg {
 					t.Errorf("Error (%s) : PANIC message is different from expected, got -> %+v", tt.name, err)
