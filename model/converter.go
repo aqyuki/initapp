@@ -8,16 +8,6 @@ type (
 	}
 )
 
-// Marshal marshal from structure to some data
-func (c *Converter) Marshal() []byte {
-	return nil
-}
-
-// Unmarshal unmarshal from some data to structure
-func (c *Converter) Unmarshal() interface{} {
-	return nil
-}
-
 // NewConverter create Converter instance
 func NewConverter(target interface{}, config *Config) *Converter {
 	if target == nil {
