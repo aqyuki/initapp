@@ -48,39 +48,13 @@ func TestNewConfig(t *testing.T) {
 			panicMsg:  "",
 		},
 		{
-			name: "Normal TOML",
-			args: args{
-				ft:   model.FileTypeTOML,
-				path: createTestPath(t),
-			},
-			want: &model.Config{
-				Type: model.FileTypeTOML,
-				Path: createTestPath(t),
-			},
-			wantPanic: false,
-			panicMsg:  "",
-		},
-		{
-			name: "Normal INI",
-			args: args{
-				ft:   model.FileTypeINI,
-				path: createTestPath(t),
-			},
-			want: &model.Config{
-				Type: model.FileTypeINI,
-				Path: createTestPath(t),
-			},
-			wantPanic: false,
-			panicMsg:  "",
-		},
-		{
 			name: "Panic - Unexpected file format ID",
 			args: args{
 				ft:   unexpected,
 				path: createTestPath(t),
 			},
 			want: &model.Config{
-				Type: model.FileTypeINI,
+				Type: model.FileTypeJSON,
 				Path: createTestPath(t),
 			},
 			wantPanic: true,

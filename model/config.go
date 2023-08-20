@@ -17,10 +17,6 @@ func NewConfig(ft FileType, path string) *Config {
 		cnf.Type = FileTypeJSON
 	} else if ft == FileTypeYAML {
 		cnf.Type = FileTypeYAML
-	} else if ft == FileTypeTOML {
-		cnf.Type = FileTypeTOML
-	} else if ft == FileTypeINI {
-		cnf.Type = FileTypeINI
 	} else {
 		// Panic exit if a file format ID not supported by the library is specified.
 		panic("Unexpected file format ID specified")
